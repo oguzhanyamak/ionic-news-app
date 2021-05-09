@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <!-- <ion-img [src]="../../../assets/icon/newspaper.png"></ion-img> -->
+      <ion-title>Haberler</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+    <div>
+          <ion-card *ngFor="let item of news?.articles">
+            <ion-card-header>
+                <ion-img [src]=item.urlToImage></ion-img>
+                <ion-item>
+                    <ion-card-subtitle>{{item.author}}</ion-card-subtitle>
+                    <!-- <ion-button fill="outline" slot="end" (click)="btnClicked(item)" [routerLink]="['/tabs/tab4']">View</ion-button> -->
+                    <!-- <ion-button href="app/tabs/(tab4)" routerDirection='root'>View</ion-button> -->
+                </ion-item>
+                <ion-card-title>{{item.title}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                {{item.description}}
+            </ion-card-content>
+            <ion-row>
+                <ion-col size = 11></ion-col>
+                <ion-col size = 1>
+                    <ion-icon name="bookmark-outline" (click)="addToBookmark(item)" size="small"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+    </div>
+</ion-content>

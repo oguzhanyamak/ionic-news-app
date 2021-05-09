@@ -1,0 +1,89 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Kaydedilenler</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+    <div>
+        <ion-card *ngFor="let item of News">
+          <ion-card-header>
+              <ion-img [src]=item.urlToImage></ion-img>
+              <ion-item>
+                  <ion-card-subtitle>{{item.author}}</ion-card-subtitle>
+                  <!-- <ion-button fill="outline" slot="end" (click)="btnClicked()">View</ion-button>  -->
+              </ion-item>
+              <ion-card-title>{{item.title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+              {{item.description}}
+          </ion-card-content>
+      </ion-card>
+  </div>
+    <!-- <ion-item>
+        <ion-label>Choose a Category:</ion-label>
+        <ion-select value="ae">
+            <ion-select-option value="ae">United Arab Emirates</ion-select-option>
+            <ion-select-option value="ar">Argentina</ion-select-option>
+            <ion-select-option value="at">Austuria</ion-select-option>
+            <ion-select-option value="au">Austuralia</ion-select-option>
+            <ion-select-option value="be">Belgium</ion-select-option>
+            <ion-select-option value="bg">Bulgaria</ion-select-option>
+            <ion-select-option value="br">Brazil</ion-select-option>
+            <ion-select-option value="ca">Canada</ion-select-option>
+        </ion-select>
+      </ion-item>
+    <ion-item>
+        <ion-label>Choose a Language:</ion-label>
+        <ion-select value="ae">
+            <ion-select-option value="ae">United Arab Emirates</ion-select-option>
+            <ion-select-option value="ar">Argentina</ion-select-option>
+            <ion-select-option value="at">Austuria</ion-select-option>
+            <ion-select-option value="au">Austuralia</ion-select-option>
+            <ion-select-option value="be">Belgium</ion-select-option>
+            <ion-select-option value="bg">Bulgaria</ion-select-option>
+            <ion-select-option value="br">Brazil</ion-select-option>
+            <ion-select-option value="ca">Canada</ion-select-option>
+            <ion-select-option value="ch">İsviçre</ion-select-option>
+            <ion-select-option value="cn">China</ion-select-option>
+            <ion-select-option value="co">Colombia</ion-select-option>
+            <ion-select-option value="cu">Cuba</ion-select-option>
+            <ion-select-option value="cz">Czechia</ion-select-option>
+            <ion-select-option value="de">Germany</ion-select-option>
+            <ion-select-option value="eg">Egypt</ion-select-option>
+            <ion-select-option value="fr">France</ion-select-option>
+            <ion-select-option value="gb">United Kingdom</ion-select-option>
+            <ion-select-option value="gr">Greece</ion-select-option>
+            <ion-select-option value="hk">Hong Kong</ion-select-option>
+            <ion-select-option value="hu">Hungary</ion-select-option>
+            <ion-select-option value="id">Indonesia</ion-select-option>
+            <ion-select-option value="ie">Ireland</ion-select-option>
+            <ion-select-option value="il">Israel</ion-select-option>
+            <ion-select-option value="it">Italy</ion-select-option>
+            <ion-select-option value="jp">Japan</ion-select-option>
+            <ion-select-option value="kr">Korea</ion-select-option>
+            <ion-select-option value="lt">Lithuania</ion-select-option>
+            <ion-select-option value="lv">Latvia</ion-select-option>
+            <ion-select-option value="ma">Morocco</ion-select-option>
+            <ion-select-option value="mx">Mexico</ion-select-option>
+            <ion-select-option value="my">Mexico</ion-select-option>
+            <ion-select-option value="ng">Nigeria</ion-select-option>
+            <ion-select-option value="nl">Netherlands</ion-select-option>
+            <ion-select-option value="nz">New Zealand</ion-select-option>
+            <ion-select-option value="ph">Philippines</ion-select-option>
+            <ion-select-option value="pl">Poland</ion-select-option>
+            <ion-select-option value="pt">Portugal</ion-select-option>
+            <ion-select-option value="ro">Romania</ion-select-option>
+            <ion-select-option value="rs">Serbia</ion-select-option>
+            <ion-select-option value="ru">Rusya</ion-select-option>
+            <ion-select-option value="sg">Singapore</ion-select-option>
+            <ion-select-option value="si">Slovenia</ion-select-option>
+            <ion-select-option value="sk">Slovakia</ion-select-option>
+            <ion-select-option value="th">Thailand</ion-select-option>
+            <ion-select-option value="tr">Turkey</ion-select-option>
+            <ion-select-option value="tw">Taiwan</ion-select-option>
+            <ion-select-option value="ua">United States</ion-select-option>
+            <ion-select-option value="ve">Venezuela</ion-select-option>
+        </ion-select>
+      </ion-item> -->
+
+</ion-content>

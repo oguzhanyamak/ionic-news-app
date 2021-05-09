@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-tabs>
+            <ion-tab-bar slot="top">
+                <ion-tab-button (click)="getNews('technology')">Technology</ion-tab-button>
+                <ion-tab-button (click)="getNews('sports')">Sports</ion-tab-button>
+                <ion-tab-button (click)="getNews('health')">Health</ion-tab-button>
+                <ion-tab-button (click)="getNews('science')">Science</ion-tab-button>
+                <ion-tab-button (click)="getNews('entertainment')">Entertainment</ion-tab-button>
+                
+            </ion-tab-bar>
+        </ion-tabs>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div>
+        <ion-card *ngFor="let item of news?.articles">
+            <ion-card-header>
+                <ion-img [src]=item.urlToImage></ion-img>
+                <ion-item>
+                    <ion-card-subtitle>{{item.author}}</ion-card-subtitle>
+                    <ion-button fill="outline" slot="end">View</ion-button>
+                </ion-item>
+                <ion-card-title>{{item.title}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                {{item.description}}
+                
+            </ion-card-content>
+            <ion-row>
+                <ion-col size = 11></ion-col>
+                <ion-col size = 1>
+                    <ion-icon name="bookmark-outline" (click)="addToBookmark(item)" size="small"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+    </div>
+</ion-content>
